@@ -4,15 +4,26 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Kahaba - Islamic Prayer Times',
   description: 'Minimal Islamic prayer-time and notification app optimized for iPhone.',
-  manifest: '/manifest.webmanifest',
   icons: {
-    icon: '/icons/kahaba.svg',
-    apple: '/icons/kahaba.svg',
+    icon: [
+      { url: '/icons/kahaba.svg', type: 'image/svg+xml' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'Kahaba',
+    startupImage: [],
+  },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'apple-mobile-web-app-title': 'Kahaba',
   },
 };
 
