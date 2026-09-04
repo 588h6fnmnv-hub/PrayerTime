@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #050505;
+  --card-glass-bg: rgba(22, 22, 26, 0.65);
+  --card-glass-border: rgba(255, 255, 255, 0.08);
+  --gold-accent: #d4af37;
+  --gold-accent-glow: rgba(212, 175, 55, 0.15);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #f4f4f5;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100vh;
+}
+
+/* Liquid Glass Utilities */
+.glass-card {
+  background: rgba(18, 18, 22, 0.6);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+}
+
+.glass-card-gold {
+  background: linear-gradient(135deg, rgba(28, 25, 20, 0.7) 0%, rgba(15, 15, 18, 0.8) 100%);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6),
+              inset 0 1px 1px 0 rgba(243, 208, 130, 0.25);
+  border-radius: 28px;
+}
+
+.glass-pill {
+  background: rgba(30, 30, 36, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.glass-button {
+  background: rgba(40, 40, 48, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-button:active {
+  transform: scale(0.96);
+  background: rgba(60, 60, 72, 0.6);
+}
+
+.glass-nav {
+  background: rgba(14, 14, 18, 0.75);
+  backdrop-filter: blur(32px) saturate(210%);
+  -webkit-backdrop-filter: blur(32px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+              inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}

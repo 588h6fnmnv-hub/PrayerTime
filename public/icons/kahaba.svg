@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#1c1c22" />
+      <stop offset="100%" stop-color="#050505" />
+    </radialGradient>
+
+    <!-- Gold Foil Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3d082" />
+      <stop offset="50%" stop-color="#c59b27" />
+      <stop offset="100%" stop-color="#7a5c0b" />
+    </linearGradient>
+
+    <!-- Kaaba Front Face Gradient -->
+    <linearGradient id="frontFace" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141417" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Kaaba Top Face Gradient -->
+    <linearGradient id="topFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a32" />
+      <stop offset="100%" stop-color="#18181c" />
+    </linearGradient>
+
+    <!-- Subtle Glow Shadow -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- App Icon Rounded Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+
+  <!-- Geometric Minimal Kaaba Structure -->
+  <g transform="translate(0, 10)">
+    <!-- Base Shadow -->
+    <ellipse cx="256" cy="385" rx="120" ry="24" fill="rgba(0,0,0,0.6)" filter="blur(10px)" />
+
+    <!-- Isometric Kaaba Cube -->
+    <!-- Top Roof Face -->
+    <polygon points="256,130 366,185 256,238 146,185" fill="url(#topFace)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Left Face -->
+    <polygon points="146,185 256,238 256,370 146,310" fill="#0d0d10" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+
+    <!-- Right Face -->
+    <polygon points="256,238 366,185 366,310 256,370" fill="url(#frontFace)" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+
+    <!-- Kiswa Gold Band (Kiswa Belt - Top) -->
+    <!-- Left Band Section -->
+    <polygon points="146,210 256,263 256,275 146,222" fill="url(#goldGrad)" />
+    <!-- Right Band Section -->
+    <polygon points="256,263 366,210 366,222 256,275" fill="url(#goldGrad)" filter="url(#goldGlow)" />
+
+    <!-- Minimal Gold Door Accent on Right Side -->
+    <polygon points="280,285 305,272 305,332 280,345" fill="url(#goldGrad)" opacity="0.9" />
+
+    <!-- Minimal Marble Base Trim -->
+    <polygon points="144,308 256,368 256,374 144,314" fill="#2a2a32" />
+    <polygon points="256,368 368,308 368,314 256,374" fill="#3a3a45" />
+  </g>
+</svg>
