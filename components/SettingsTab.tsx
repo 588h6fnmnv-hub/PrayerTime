@@ -210,14 +210,25 @@ export function SettingsTab({
         </div>
 
         {/* Capacitor Info */}
-        <div className="p-3.5 rounded-2xl bg-amber-500/[0.05] border border-amber-500/15 space-y-1">
+        <div className="p-3.5 rounded-2xl bg-amber-500/[0.05] border border-amber-500/15 space-y-2">
           <div className="flex items-center space-x-1.5 text-amber-300 text-xs font-semibold">
             <ShieldCheck className="w-4 h-4" />
-            <span>Capacitor iOS Ready</span>
+            <span>Capacitor iOS & IPA Export</span>
           </div>
           <p className="text-[11px] text-zinc-400 leading-relaxed">
-            Kahaba architecture is decoupled from browser notification limitations, enabling direct local notification integration via @capacitor/local-notifications.
+            Kahaba architecture is fully decoupled for Capacitor conversion. An .ipa binary requires Apple Developer code signing via Xcode on macOS or AltStore/Sideloadly.
           </p>
+          <div className="pt-1">
+            <a
+              href="https://capacitorjs.com/docs/ios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[11px] text-amber-300 font-medium hover:underline"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Capacitor iOS Build Guide</span>
+            </a>
+          </div>
         </div>
       </section>
 
